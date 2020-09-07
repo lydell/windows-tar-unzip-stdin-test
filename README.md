@@ -39,5 +39,7 @@ Note: BSD tar can unzip ZIP files, while GNU tar cannot.
 Versions used:
 
 - Node.js 14.9.0.
-- tar macOS: bsdtar 3.3.2 - libarchive 3.3.2 zlib/1.2.11 liblzma/5.0.5 bz2lib/1.0.6
-- tar Windows: bsdtar 3.3.2 - libarchive 3.3.2 zlib/1.2.5.f-ipp
+- bsdtar 3.3.2 - libarchive 3.3.2 zlib/1.2.11 liblzma/5.0.5 bz2lib/1.0.6 (mac)
+- bsdtar 3.3.2 - libarchive 3.3.2 zlib/1.2.5.f-ipp (Windows)
+- macOS Catalina Version 10.15.6
+- Windows 10 Home Version 2004
