@@ -2,17 +2,34 @@
 
 `test.zip` contains `hello.txt` which contains `Hello, world!`.
 
-Let’s see if we can unzip it using `tar` on Windows. Running each command below should result in `hello.txt` appearing.
+So does `test.tgz`.
+
+Let’s see if we can unzip/untar them using `tar` on Windows. Running each command below should result in `hello.txt` appearing.
 
 Note! Remove `hello.txt` between each step.
 
+`test.zip`:
+
 0. `tar xf - < test.zip`
-1. `node 1_spawn.js`
-2. `node 2_cross-spawn.js`
-3. `node 3_spawn_no_stdin.js`
+1. `node 1_spawn.js test.zip`
+2. `node 2_cross-spawn.js test.zip`
+3. `node 3_spawn_no_stdin.js test.zip`
+
+`test.tgz`:
+
+0. `tar xf - < test.tgz`
+1. `node 1_spawn.js test.tgz`
+2. `node 2_cross-spawn.js test.tgz`
+3. `node 3_spawn_no_stdin.js test.tgz`
 
 On macOS they all work.
 
 On Windows TBD.
 
 Note: BSD tar can unzip ZIP files, while GNU tar cannot.
+
+Versions used:
+
+- Node.js 14.9.0.
+- tar macOS: bsdtar 3.3.2 - libarchive 3.3.2 zlib/1.2.11 liblzma/5.0.5 bz2lib/1.0.6
+- tar Windows: bsdtar 3.3.2 - libarchive 3.3.2 zlib/1.2.5.f-ipp
