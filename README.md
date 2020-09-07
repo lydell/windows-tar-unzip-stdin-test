@@ -6,7 +6,7 @@ So does `test.tgz`.
 
 Let’s see if we can unzip/untar them using `tar` on Windows. Running each command below should result in `hello.txt` appearing.
 
-Note! Remove `hello.txt` between each step.
+Note! Remove `hello.txt` between each step. Run `npm ci` before trying to use `2_cross-spawn.js`.
 
 `test.zip`:
 
@@ -24,7 +24,15 @@ Note! Remove `hello.txt` between each step.
 
 On macOS they all work.
 
-On Windows TBD.
+On Windows everything works except `node 1_spawn.js test.zip` and `node 2_cross-spawn.js test.zip` which fail with:
+
+```
+tar: (null)
+
+tar: Error exit delayed from previous errors.
+
+close 1
+```
 
 Note: BSD tar can unzip ZIP files, while GNU tar cannot.
 
